@@ -1,10 +1,5 @@
-#temp-content {
-	width: 100%;
-	padding: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.App {
+	padding: 10rem 20px 20px;
 	text-align: center;
 }
 
@@ -20,27 +15,34 @@
 h1 {
 	font-weight: 500;
 	margin-bottom: 20px;
-	font-size: 1.6em;
+	font-size: 1.6rem;
+}
+
+h2 {
+    font-weight: 500;
+	font-size: 1.4rem;
 }
 
 p {
 	margin-bottom: 10px;
 }
 
-a {
+.contact {
+    display: block;
 	font-size: 1.6em;
 	text-decoration: none;
 	font-weight: 500;
-	transition: color .4s;
+    transition: color .4s;
+    margin-bottom: 5rem;
 }
 
 @media screen and (min-width: 1024px) {
-	#temp-content {
-		width: 50%;
-	}
-
-	a,
+	.contact,
 	h1 {
-		font-size: 2em;
-	}
+		font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
 }
