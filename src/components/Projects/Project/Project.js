@@ -7,7 +7,7 @@ class Project extends Component {
             <a className="Project" href={this.props.data.url} target="_blank" rel="noopener noreferrer">
                 <img src={this.props.data.image} alt={this.props.data.name} />
 
-                <div><div>Se project</div></div>
+                <div><div>Se projekt</div></div>
             </a>
         );
     }
