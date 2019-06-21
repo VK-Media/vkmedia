@@ -36,6 +36,16 @@ p {
     margin-bottom: 5rem;
 }
 
+a {
+    transition: color .25s;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    color: #3498db;
+}
+
 @media screen and (min-width: 1024px) {
 	.contact,
 	h1 {

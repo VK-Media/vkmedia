@@ -3,40 +3,35 @@
     transition: transform .25s;
     margin: 20px 0;
     text-decoration: none;
-}
-
-.Project .window {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border: 1px solid #adadad;
-    margin: 0 auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.55);
-}
-
-.Project .window__bar {
-    background:
-    radial-gradient(7px at 14px 50%, #ff5e57 0px, #ff635a 5px, #fd5249 6px, rgba(255, 255, 255, 0) 7px),
-    radial-gradient(7px at 34px 50%, #ffbd2e 0px, #ffc42f 5px, #fcb91b 6px, rgba(255, 255, 255, 0) 7px),
-    radial-gradient(7px at 54px 50%, #cfcfcf 0px, #d3d3d3 5px, #c6c6c6 6px, rgba(255, 255, 255, 0) 7px),
-    linear-gradient(to top, #cccccc 0%, #d6d6d6 1px, #ebebeb 100%);
-
-    border: 1px solid white;
-    border-left-color: #f3f3f3;
-    border-right-color: #f3f3f3;
-    border-bottom-color: #bdbdbd;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    height: 20px;
-    text-align: center;
-    color: #505151;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 20px;
-    vertical-align: middle;
+    position: relative;
 }
 
 .Project img {
     width: 100%;
+}
+
+.Project > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3498dbd3;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.Project > div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #fdfdfd;
+    color: #fdfdfd;
+    font-weight: 500;
 }
 
 .Project:hover,
@@ -44,10 +39,14 @@
     transform: scale(1.02);
 }
 
+.Project:hover > div,
+.Project:focus > div {
+    opacity: 1;
+}
+
 @media screen and (min-width: 1024px){
     .Project {
         margin: 0;
-        padding: 20px;
-        width: 50%;
+        width: calc(100% / 3);
     }
 }
