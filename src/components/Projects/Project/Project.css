@@ -50,10 +50,10 @@
 
 @media screen and (min-width: 1024px){
     .Project {
-        width: calc((100% / 3) - (20px * 2 / 3));
+        width: calc((100% / 2) - (20px * 1 / 2));
     }
 
-    .Project:not(:nth-of-type(3n)) {
+    .Project:not(:nth-of-type(2n)) {
         margin-right: 20px;
     }
 }
